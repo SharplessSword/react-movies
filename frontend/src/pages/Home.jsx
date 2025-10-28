@@ -1,4 +1,5 @@
 import MovieCard from "../components/MovieCard";
+import "../css/Home.css";
 
 function Home() {
     const movie = [
