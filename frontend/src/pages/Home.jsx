@@ -1,6 +1,6 @@
 import MovieCard from "../components/MovieCard";
 import {useState, useEffect} from "react";
-import { searchMovies, getPoplularMovies } from "../services/api";
+import { searchMovies, getPopularMovies } from "../services/api";
 import "../css/Home.css";
 
 function Home() {
@@ -11,7 +11,7 @@ function Home() {
     useEffect(() => {
         const loadPopularMovies = async () => {
             try {
-                const popularMovies = await getPoplularMovies();
+                const popularMovies = await getPopularMovies();
                 setMovies(popularMovies);
             } catch (err) {
                 console.log(err);
